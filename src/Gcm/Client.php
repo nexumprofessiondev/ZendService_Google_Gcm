@@ -12,8 +12,8 @@
 namespace ZendService\Google\Gcm;
 
 use ZendService\Google\Exception;
-use Zend\Http\Client as HttpClient;
-use Zend\Json\Json;
+use Laminas\Http\Client as HttpClient;
+use Laminas\Json\Json;
 
 /**
  * Google Cloud Messaging Client
@@ -30,7 +30,7 @@ class Client
     const SERVER_URI = 'https://fcm.googleapis.com/fcm/send';
 
     /**
-     * @var \Zend\Http\Client
+     * @var \Laminas\Http\Client
      */
     protected $httpClient;
 
@@ -71,9 +71,9 @@ class Client
     /**
      * Get HTTP Client.
      *
-     * @throws \Zend\Http\Client\Exception\InvalidArgumentException
+     * @throws \Laminas\Http\Client\Exception\InvalidArgumentException
      *
-     * @return \Zend\Http\Client
+     * @return \Laminas\Http\Client
      */
     public function getHttpClient()
     {
@@ -88,7 +88,7 @@ class Client
     /**
      * Set HTTP Client.
      *
-     * @param \Zend\Http\Client
+     * @param \Laminas\Http\Client
      *
      * @return Client
      */
@@ -104,12 +104,12 @@ class Client
      *
      * @param Message $message
      *
-     * @throws \Zend\Json\Exception\RuntimeException
+     * @throws \Laminas\Json\Exception\RuntimeException
      * @throws \ZendService\Google\Exception\RuntimeException
-     * @throws \Zend\Http\Exception\RuntimeException
-     * @throws \Zend\Http\Client\Exception\RuntimeException
-     * @throws \Zend\Http\Exception\InvalidArgumentException
-     * @throws \Zend\Http\Client\Exception\InvalidArgumentException
+     * @throws \Laminas\Http\Exception\RuntimeException
+     * @throws \Laminas\Http\Client\Exception\RuntimeException
+     * @throws \Laminas\Http\Exception\InvalidArgumentException
+     * @throws \Laminas\Http\Client\Exception\InvalidArgumentException
      * @throws \ZendService\Google\Exception\InvalidArgumentException
      *
      * @return Response

@@ -12,8 +12,8 @@
 namespace ZendServiceTest\Google\Gcm;
 
 use PHPUnit\Framework\TestCase;
-use Zend\Http\Client\Adapter\Test;
-use Zend\Http\Client as HttpClient;
+use Laminas\Http\Client\Adapter\Test;
+use Laminas\Http\Client as HttpClient;
 use ZendService\Google\Gcm\Client;
 use ZendService\Google\Gcm\Message;
 
@@ -83,7 +83,7 @@ class ClientTest extends TestCase
 
     public function testGetHttpClientReturnsDefault()
     {
-        self::assertInstanceOf('Zend\Http\Client', (new Client())->getHttpClient());
+        self::assertInstanceOf('Laminas\Http\Client', (new Client())->getHttpClient());
     }
 
     public function testSetHttpClient()

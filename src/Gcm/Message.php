@@ -12,7 +12,7 @@
 namespace ZendService\Google\Gcm;
 
 use ZendService\Google\Exception;
-use Zend\Json\Json;
+use Laminas\Json\Json;
 
 /**
  * Google Cloud Messaging Message
